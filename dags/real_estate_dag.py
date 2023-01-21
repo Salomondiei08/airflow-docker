@@ -3,11 +3,13 @@ from airflow.operators.python_operator import PythonOperator
 from airflow.operators.postgres_operator import PostgresOperator
 from datetime import datetime, timedelta
 import pandas as pd
+import os
+import json
 
 # Default arguments for the DAG
 default_args = {
     'owner': 'me',
-    'start_date': datetime(2022, 1, 1),
+    'start_date': datetime(2023, 1, 19),
     'depends_on_past': False,
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
@@ -17,28 +19,50 @@ default_args = {
 dag = DAG(
     'real_estate_data_pipeline',
     default_args=default_args,
-    schedule_interval=timedelta(hours=1),
+ #  schedule_interval=timedelta(hours=1), 
 )
+
 
 # Define a function to read the CSV file
 def read_csv():
-    df = pd.read_csv('sales.csv')
+    path = '/opt/airflow/dags/sales.csv'
+    isExist = os.path.exists(path)
+
+    print('File esxist ?') 
+    print(isExist)
+
+    df = pd.read_csv(path)
+
+    # Convert df from dataframe to json
+    df = df.to_json()
+    
     return df
+
 
 # Define a function that cleans the csv file
 def clean_and_transform_data(**kwargs):
+
     df = kwargs['task_instance'].xcom_pull(task_ids='read_csv')
+
+    df = json.loads(df)
+    print("The value of the dataframe 1 is :")
+    print(df)
+    
+    df =  pd.json_normalize(df)
+    print("The value of the dataframe 2 is :")
+    print(df)
     # Perform data cleaning and transformation here
-    df = df.dropna() # remove rows with missing values
-    df = df[df['price'] > 0] # remove rows with 0 price
-    df['price'] = df['price'].astype(int) # cast price to int
-    df['bedrooms'] = df['bedrooms'].astype(int) # cast bedrooms to int
-    df['bathrooms'] = df['bathrooms'].astype(float) # cast bathrooms to float
-    df['sqft'] = df['sqft'].astype(int) # cast sqft to int
-    df['sale_date'] = pd.to_datetime(df['sale_date']) # cast sale_date to datetime
-    df = df.rename(columns={'address': 'property_address', 'zipcode': 'property_zipcode'}) # rename columns
-    df = df[['property_address','city','property_zipcode','price','bedrooms','bathrooms','sqft','sale_date']]
+    df = df.dropna()  # remove rows with missing values
+    df = df[df['price'] > 0]  # remove rows with 0 price
+    df['price'] = df['price'].astype(int)  # cast price to int
+    df['bedrooms'] = df['bedrooms'].astype(int)  # cast bedrooms to int
+    df['bathrooms'] = df['bathrooms'].astype(float)  # cast bathrooms to float
+    df['sqft'] = df['sqft'].astype(int)  # cast sqft to int
+    df['sale_date'] = pd.to_datetime(df['sale_date'])  # cast sale_date to datetime
+    df = df.rename(columns={'address': 'property_address', 'zipcode': 'property_zipcode'})  # rename columns
+    df = df[['property_address', 'city', 'property_zipcode', 'price', 'bedrooms', 'bathrooms', 'sqft', 'sale_date']]
     return df
+
 
 # Create the 'housing_market_db' if it does not exist
 def create_db():
@@ -63,7 +87,6 @@ def create_db():
     conn.close()
 
 
-
 # Define a task to read the CSV file
 read_csv = PythonOperator(
     task_id='read_csv',
@@ -73,7 +96,7 @@ read_csv = PythonOperator(
 
 # Define a task to perform data cleaning and transformation
 clean_and_transform = PythonOperator(
-    task_id='clean_and_transform',
+    task_id='clean_and_transform_data',
     provide_context=True,
     python_callable=clean_and_transform_data,
     dag=dag
@@ -93,7 +116,6 @@ load_data_to_postgres = PostgresOperator(
     postgres_conn_id='postgres_default',
     dag=dag
 )
-
 
 # Set up the dependencies between tasks
 read_csv >> clean_and_transform >> create_db >> load_data_to_postgres
