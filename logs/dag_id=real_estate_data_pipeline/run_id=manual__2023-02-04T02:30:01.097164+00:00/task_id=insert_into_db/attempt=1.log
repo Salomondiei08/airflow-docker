@@ -1,0 +1,41 @@
+[2023-02-04T02:30:10.354+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: real_estate_data_pipeline.insert_into_db manual__2023-02-04T02:30:01.097164+00:00 [queued]>
+[2023-02-04T02:30:10.361+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: real_estate_data_pipeline.insert_into_db manual__2023-02-04T02:30:01.097164+00:00 [queued]>
+[2023-02-04T02:30:10.362+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-04T02:30:10.362+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 2
+[2023-02-04T02:30:10.363+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-04T02:30:10.371+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): insert_into_db> on 2023-02-04 02:30:01.097164+00:00
+[2023-02-04T02:30:10.375+0000] {standard_task_runner.py:54} INFO - Started process 8062 to run task
+[2023-02-04T02:30:10.378+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'real_estate_data_pipeline', 'insert_into_db', 'manual__2023-02-04T02:30:01.097164+00:00', '--job-id', '1359', '--raw', '--subdir', 'DAGS_FOLDER/real_estate_dag.py', '--cfg-path', '/tmp/tmpqwwdce_d']
+[2023-02-04T02:30:10.379+0000] {standard_task_runner.py:83} INFO - Job 1359: Subtask insert_into_db
+[2023-02-04T02:30:10.380+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/***/dags/real_estate_dag.py
+[2023-02-04T02:30:10.626+0000] {task_command.py:384} INFO - Running <TaskInstance: real_estate_data_pipeline.insert_into_db manual__2023-02-04T02:30:01.097164+00:00 [running]> on host 9667f615f42a
+[2023-02-04T02:30:10.674+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=me
+AIRFLOW_CTX_DAG_ID=real_estate_data_pipeline
+AIRFLOW_CTX_TASK_ID=insert_into_db
+AIRFLOW_CTX_EXECUTION_DATE=2023-02-04T02:30:01.097164+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-02-04T02:30:01.097164+00:00
+[2023-02-04T02:30:13.147+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/real_estate_dag.py", line 99, in insert_into_db
+    """)
+psycopg2.errors.UndefinedColumn: column "property_address" does not exist
+LINE 8:             sale_date) VALUES (property_address, city,proper...
+                                       ^
+HINT:  There is a column named "property_address" in table "housing_market_data", but it cannot be referenced from this part of the query.
+
+[2023-02-04T02:30:13.207+0000] {taskinstance.py:1406} INFO - Marking task as UP_FOR_RETRY. dag_id=real_estate_data_pipeline, task_id=insert_into_db, execution_date=20230204T023001, start_date=20230204T023010, end_date=20230204T023013
+[2023-02-04T02:30:13.224+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 1359 for task insert_into_db (column "property_address" does not exist
+LINE 8:             sale_date) VALUES (property_address, city,proper...
+                                       ^
+HINT:  There is a column named "property_address" in table "housing_market_data", but it cannot be referenced from this part of the query.
+; 8062)
+[2023-02-04T02:30:13.323+0000] {local_task_job.py:164} INFO - Task exited with return code 1
+[2023-02-04T02:30:13.388+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

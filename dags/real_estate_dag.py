@@ -1,15 +1,15 @@
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
-from airflow.operators.postgres_operator import PostgresOperator
 from datetime import datetime, timedelta
 import pandas as pd
 import os
+import psycopg2
 import json
 
 # Default arguments for the DAG
 default_args = {
     'owner': 'me',
-    'start_date': datetime(2023, 1, 19),
+    'start_date': datetime(2023, 2, 3),
     'depends_on_past': False,
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
@@ -19,38 +19,16 @@ default_args = {
 dag = DAG(
     'real_estate_data_pipeline',
     default_args=default_args,
- #  schedule_interval=timedelta(hours=1), 
+    #  schedule_interval=timedelta(hours=1),
 )
 
 
-# Define a function to read the CSV file
-def read_csv():
+# Define a function that cleans the csv file
+def clean_and_transform_data():
     path = '/opt/airflow/dags/sales.csv'
-    isExist = os.path.exists(path)
-
-    print('File esxist ?') 
-    print(isExist)
 
     df = pd.read_csv(path)
 
-    # Convert df from dataframe to json
-    df = df.to_json()
-    
-    return df
-
-
-# Define a function that cleans the csv file
-def clean_and_transform_data(**kwargs):
-
-    df = kwargs['task_instance'].xcom_pull(task_ids='read_csv')
-
-    df = json.loads(df)
-    print("The value of the dataframe 1 is :")
-    print(df)
-    
-    df =  pd.json_normalize(df)
-    print("The value of the dataframe 2 is :")
-    print(df)
     # Perform data cleaning and transformation here
     df = df.dropna()  # remove rows with missing values
     df = df[df['price'] > 0]  # remove rows with 0 price
@@ -66,9 +44,8 @@ def clean_and_transform_data(**kwargs):
 
 # Create the 'housing_market_db' if it does not exist
 def create_db():
-    conn = psycopg2.connect(dbname="housing_market_db", user="postgres", password="postgres", host="localhost")
+    conn = psycopg2.connect(dbname="housing_market_db", user="salomon", password="salomon", host="139.144.169.214")
     cur = conn.cursor()
-    cur.execute("CREATE DATABASE IF NOT EXISTS housing_market_db")
     cur.execute("""
         CREATE TABLE IF NOT EXISTS housing_market_data (
             id SERIAL PRIMARY KEY,
@@ -87,12 +64,20 @@ def create_db():
     conn.close()
 
 
-# Define a task to read the CSV file
-read_csv = PythonOperator(
-    task_id='read_csv',
-    python_callable=read_csv,
-    dag=dag,
-)
+def insert_into_db():
+    conn = psycopg2.connect(dbname="housing_market_db", user="salomon", password="salomon", host="139.144.169.214")
+    cur = conn.cursor()
+    cur.execute("""
+INSERT INTO housing_market_data
+(property_address, city, property_zipcode, price, bedrooms, bathrooms, sqft, sale_date)
+
+VALUES
+('test', 'Berlin', 33, 3987890, 33, 43, 98, '2016-06-22 19:10:25-07')
+    """)
+    conn.commit()
+    cur.close()
+    conn.close()
+
 
 # Define a task to perform data cleaning and transformation
 clean_and_transform = PythonOperator(
@@ -110,12 +95,11 @@ create_db = PythonOperator(
 )
 
 # Define a task to load the data into the Postgres database
-load_data_to_postgres = PostgresOperator(
-    task_id='load_data_to_postgres',
-    sql='INSERT INTO housing_market (property_address, city,property_zipcode,price,bedrooms,bathrooms,sqft,sale_date) SELECT property_address, city,property_zipcode,price,bedrooms,bathrooms,sqft,sale_date FROM cleaned_data',
-    postgres_conn_id='postgres_default',
+insert_into_db = PythonOperator(
+    task_id='insert_into_db',
+    python_callable=insert_into_db,
     dag=dag
 )
 
 # Set up the dependencies between tasks
-read_csv >> clean_and_transform >> create_db >> load_data_to_postgres
+clean_and_transform >> create_db >> insert_into_db

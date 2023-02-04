@@ -1,0 +1,138 @@
+[2023-02-03T23:52:16.681+0000] {processor.py:156} INFO - Started process (PID=32) to work on /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:52:16.683+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/real_estate_dag.py for tasks to queue
+[2023-02-03T23:52:16.684+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:52:16.684+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:52:17.553+0000] {processor.py:768} INFO - DAG(s) dict_keys(['real_estate_data_pipeline']) retrieved from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:52:17.615+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:52:17.615+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2023-02-03T23:52:17.652+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:52:17.652+0000] {dag.py:3328} INFO - Setting next_dagrun for real_estate_data_pipeline to 2023-02-02T01:00:00+00:00, run_after=2023-02-03T01:00:00+00:00
+[2023-02-03T23:52:17.676+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/real_estate_dag.py took 1.001 seconds
+[2023-02-03T23:52:48.139+0000] {processor.py:156} INFO - Started process (PID=69) to work on /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:52:48.153+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/real_estate_dag.py for tasks to queue
+[2023-02-03T23:52:48.156+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:52:48.156+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:52:49.233+0000] {processor.py:768} INFO - DAG(s) dict_keys(['real_estate_data_pipeline']) retrieved from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:52:49.348+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:52:49.348+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2023-02-03T23:52:49.367+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:52:49.367+0000] {dag.py:3328} INFO - Setting next_dagrun for real_estate_data_pipeline to 2023-02-03T01:00:00+00:00, run_after=2023-02-04T01:00:00+00:00
+[2023-02-03T23:52:49.384+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/real_estate_dag.py took 1.250 seconds
+[2023-02-03T23:53:19.689+0000] {processor.py:156} INFO - Started process (PID=99) to work on /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:53:19.693+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/real_estate_dag.py for tasks to queue
+[2023-02-03T23:53:19.694+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:53:19.694+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:53:20.040+0000] {processor.py:768} INFO - DAG(s) dict_keys(['real_estate_data_pipeline']) retrieved from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:53:20.062+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:53:20.062+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2023-02-03T23:53:20.077+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:53:20.076+0000] {dag.py:3328} INFO - Setting next_dagrun for real_estate_data_pipeline to 2023-02-03T01:00:00+00:00, run_after=2023-02-04T01:00:00+00:00
+[2023-02-03T23:53:20.088+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/real_estate_dag.py took 0.407 seconds
+[2023-02-03T23:53:50.347+0000] {processor.py:156} INFO - Started process (PID=129) to work on /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:53:50.349+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/real_estate_dag.py for tasks to queue
+[2023-02-03T23:53:50.351+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:53:50.351+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:53:50.758+0000] {processor.py:768} INFO - DAG(s) dict_keys(['real_estate_data_pipeline']) retrieved from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:53:50.783+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:53:50.783+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2023-02-03T23:53:50.797+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:53:50.797+0000] {dag.py:3328} INFO - Setting next_dagrun for real_estate_data_pipeline to 2023-02-03T01:00:00+00:00, run_after=2023-02-04T01:00:00+00:00
+[2023-02-03T23:53:50.808+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/real_estate_dag.py took 0.470 seconds
+[2023-02-03T23:54:21.082+0000] {processor.py:156} INFO - Started process (PID=149) to work on /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:54:21.084+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/real_estate_dag.py for tasks to queue
+[2023-02-03T23:54:21.085+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:54:21.085+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:54:21.539+0000] {processor.py:768} INFO - DAG(s) dict_keys(['real_estate_data_pipeline']) retrieved from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:54:21.566+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:54:21.566+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2023-02-03T23:54:21.582+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:54:21.582+0000] {dag.py:3328} INFO - Setting next_dagrun for real_estate_data_pipeline to 2023-01-19T00:00:00+00:00, run_after=2023-01-20T00:00:00+00:00
+[2023-02-03T23:54:21.592+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/real_estate_dag.py took 0.515 seconds
+[2023-02-03T23:54:51.721+0000] {processor.py:156} INFO - Started process (PID=199) to work on /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:54:51.724+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/real_estate_dag.py for tasks to queue
+[2023-02-03T23:54:51.726+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:54:51.726+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:54:52.137+0000] {processor.py:768} INFO - DAG(s) dict_keys(['real_estate_data_pipeline']) retrieved from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:54:52.183+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:54:52.182+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2023-02-03T23:54:52.215+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/real_estate_dag.py took 0.505 seconds
+[2023-02-03T23:55:16.494+0000] {processor.py:156} INFO - Started process (PID=219) to work on /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:55:16.497+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/real_estate_dag.py for tasks to queue
+[2023-02-03T23:55:16.499+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:55:16.499+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:55:17.508+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:55:17.490+0000] {dagbag.py:330} ERROR - Failed to import: /opt/airflow/dags/real_estate_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 326, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/real_estate_dag.py", line 12, in <module>
+    'start_date': datetime(2023, 1, ),
+TypeError: function missing required argument 'day' (pos 3)
+[2023-02-03T23:55:17.512+0000] {processor.py:770} WARNING - No viable dags retrieved from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:55:17.585+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/real_estate_dag.py took 1.100 seconds
+[2023-02-03T23:55:19.551+0000] {processor.py:156} INFO - Started process (PID=221) to work on /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:55:19.560+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/real_estate_dag.py for tasks to queue
+[2023-02-03T23:55:19.575+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:55:19.567+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:55:19.963+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:55:19.952+0000] {dagbag.py:330} ERROR - Failed to import: /opt/airflow/dags/real_estate_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 326, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/real_estate_dag.py", line 12, in <module>
+    'start_date': datetime(2023, 2, ),
+TypeError: function missing required argument 'day' (pos 3)
+[2023-02-03T23:55:19.979+0000] {processor.py:770} WARNING - No viable dags retrieved from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:55:20.050+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/real_estate_dag.py took 0.516 seconds
+[2023-02-03T23:55:21.253+0000] {processor.py:156} INFO - Started process (PID=223) to work on /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:55:21.258+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/real_estate_dag.py for tasks to queue
+[2023-02-03T23:55:21.265+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:55:21.265+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:55:21.839+0000] {processor.py:768} INFO - DAG(s) dict_keys(['real_estate_data_pipeline']) retrieved from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:55:21.926+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:55:21.926+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2023-02-03T23:55:21.965+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/real_estate_dag.py took 0.749 seconds
+[2023-02-03T23:55:52.037+0000] {processor.py:156} INFO - Started process (PID=252) to work on /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:55:52.039+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/real_estate_dag.py for tasks to queue
+[2023-02-03T23:55:52.043+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:55:52.042+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:55:52.273+0000] {processor.py:768} INFO - DAG(s) dict_keys(['real_estate_data_pipeline']) retrieved from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:55:52.309+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:55:52.309+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2023-02-03T23:55:52.330+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:55:52.330+0000] {dag.py:3328} INFO - Setting next_dagrun for real_estate_data_pipeline to 2023-02-03T00:00:00+00:00, run_after=2023-02-04T00:00:00+00:00
+[2023-02-03T23:55:52.343+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/real_estate_dag.py took 0.310 seconds
+[2023-02-03T23:56:22.581+0000] {processor.py:156} INFO - Started process (PID=280) to work on /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:56:22.583+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/real_estate_dag.py for tasks to queue
+[2023-02-03T23:56:22.585+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:56:22.585+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:56:22.838+0000] {processor.py:768} INFO - DAG(s) dict_keys(['real_estate_data_pipeline']) retrieved from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:56:22.868+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:56:22.868+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2023-02-03T23:56:22.885+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:56:22.885+0000] {dag.py:3328} INFO - Setting next_dagrun for real_estate_data_pipeline to 2023-02-03T00:00:00+00:00, run_after=2023-02-04T00:00:00+00:00
+[2023-02-03T23:56:22.896+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/real_estate_dag.py took 0.321 seconds
+[2023-02-03T23:56:53.126+0000] {processor.py:156} INFO - Started process (PID=309) to work on /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:56:53.128+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/real_estate_dag.py for tasks to queue
+[2023-02-03T23:56:53.129+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:56:53.129+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:56:53.281+0000] {processor.py:768} INFO - DAG(s) dict_keys(['real_estate_data_pipeline']) retrieved from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:56:53.305+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:56:53.305+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2023-02-03T23:56:53.319+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:56:53.319+0000] {dag.py:3328} INFO - Setting next_dagrun for real_estate_data_pipeline to 2023-02-03T00:00:00+00:00, run_after=2023-02-04T00:00:00+00:00
+[2023-02-03T23:56:53.329+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/real_estate_dag.py took 0.206 seconds
+[2023-02-03T23:57:00.239+0000] {processor.py:156} INFO - Started process (PID=311) to work on /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:57:00.242+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/real_estate_dag.py for tasks to queue
+[2023-02-03T23:57:00.243+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:57:00.243+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:57:00.509+0000] {processor.py:768} INFO - DAG(s) dict_keys(['real_estate_data_pipeline']) retrieved from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:57:00.544+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:57:00.543+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2023-02-03T23:57:00.562+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:57:00.562+0000] {dag.py:3328} INFO - Setting next_dagrun for real_estate_data_pipeline to 2023-02-03T00:00:00+00:00, run_after=2023-02-04T00:00:00+00:00
+[2023-02-03T23:57:00.575+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/real_estate_dag.py took 0.344 seconds
+[2023-02-03T23:57:30.675+0000] {processor.py:156} INFO - Started process (PID=341) to work on /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:57:30.677+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/real_estate_dag.py for tasks to queue
+[2023-02-03T23:57:30.679+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:57:30.679+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:57:30.997+0000] {processor.py:768} INFO - DAG(s) dict_keys(['real_estate_data_pipeline']) retrieved from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:57:31.035+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:57:31.035+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2023-02-03T23:57:31.055+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:57:31.055+0000] {dag.py:3328} INFO - Setting next_dagrun for real_estate_data_pipeline to 2023-02-03T00:00:00+00:00, run_after=2023-02-04T00:00:00+00:00
+[2023-02-03T23:57:31.067+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/real_estate_dag.py took 0.401 seconds
+[2023-02-03T23:58:01.366+0000] {processor.py:156} INFO - Started process (PID=370) to work on /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:58:01.369+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/real_estate_dag.py for tasks to queue
+[2023-02-03T23:58:01.373+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:58:01.373+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:58:01.653+0000] {processor.py:768} INFO - DAG(s) dict_keys(['real_estate_data_pipeline']) retrieved from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:58:01.695+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:58:01.695+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2023-02-03T23:58:01.727+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:58:01.727+0000] {dag.py:3328} INFO - Setting next_dagrun for real_estate_data_pipeline to 2023-02-03T00:00:00+00:00, run_after=2023-02-04T00:00:00+00:00
+[2023-02-03T23:58:01.740+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/real_estate_dag.py took 0.380 seconds
+[2023-02-03T23:58:32.034+0000] {processor.py:156} INFO - Started process (PID=399) to work on /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:58:32.036+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/real_estate_dag.py for tasks to queue
+[2023-02-03T23:58:32.038+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:58:32.038+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:58:32.253+0000] {processor.py:768} INFO - DAG(s) dict_keys(['real_estate_data_pipeline']) retrieved from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:58:32.286+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:58:32.286+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2023-02-03T23:58:32.303+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:58:32.303+0000] {dag.py:3328} INFO - Setting next_dagrun for real_estate_data_pipeline to 2023-02-03T00:00:00+00:00, run_after=2023-02-04T00:00:00+00:00
+[2023-02-03T23:58:32.314+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/real_estate_dag.py took 0.284 seconds
+[2023-02-03T23:59:02.629+0000] {processor.py:156} INFO - Started process (PID=427) to work on /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:59:02.632+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/real_estate_dag.py for tasks to queue
+[2023-02-03T23:59:02.633+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:59:02.633+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:59:02.869+0000] {processor.py:768} INFO - DAG(s) dict_keys(['real_estate_data_pipeline']) retrieved from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:59:02.905+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:59:02.905+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2023-02-03T23:59:02.927+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:59:02.926+0000] {dag.py:3328} INFO - Setting next_dagrun for real_estate_data_pipeline to 2023-02-03T00:00:00+00:00, run_after=2023-02-04T00:00:00+00:00
+[2023-02-03T23:59:02.944+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/real_estate_dag.py took 0.321 seconds
+[2023-02-03T23:59:33.296+0000] {processor.py:156} INFO - Started process (PID=447) to work on /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:59:33.299+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/real_estate_dag.py for tasks to queue
+[2023-02-03T23:59:33.301+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:59:33.301+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:59:33.603+0000] {processor.py:768} INFO - DAG(s) dict_keys(['real_estate_data_pipeline']) retrieved from /opt/airflow/dags/real_estate_dag.py
+[2023-02-03T23:59:33.674+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:59:33.674+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2023-02-03T23:59:33.710+0000] {logging_mixin.py:117} INFO - [2023-02-03T23:59:33.710+0000] {dag.py:3328} INFO - Setting next_dagrun for real_estate_data_pipeline to 2023-02-03T00:00:00+00:00, run_after=2023-02-04T00:00:00+00:00
+[2023-02-03T23:59:33.755+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/real_estate_dag.py took 0.467 seconds

@@ -1,0 +1,26 @@
+[2023-02-03T23:54:28.647+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: real_estate_data_pipeline.read_csv scheduled__2023-02-02T00:00:00+00:00 [queued]>
+[2023-02-03T23:54:28.753+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: real_estate_data_pipeline.read_csv scheduled__2023-02-02T00:00:00+00:00 [queued]>
+[2023-02-03T23:54:28.761+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-03T23:54:28.762+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 2
+[2023-02-03T23:54:28.764+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-03T23:54:28.973+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): read_csv> on 2023-02-02 00:00:00+00:00
+[2023-02-03T23:54:29.013+0000] {standard_task_runner.py:54} INFO - Started process 243 to run task
+[2023-02-03T23:54:29.089+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'real_estate_data_pipeline', 'read_csv', 'scheduled__2023-02-02T00:00:00+00:00', '--job-id', '1268', '--raw', '--subdir', 'DAGS_FOLDER/real_estate_dag.py', '--cfg-path', '/tmp/tmpwgo1065p']
+[2023-02-03T23:54:29.203+0000] {standard_task_runner.py:83} INFO - Job 1268: Subtask read_csv
+[2023-02-03T23:54:29.247+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/***/dags/real_estate_dag.py
+[2023-02-03T23:54:36.571+0000] {task_command.py:384} INFO - Running <TaskInstance: real_estate_data_pipeline.read_csv scheduled__2023-02-02T00:00:00+00:00 [running]> on host 9667f615f42a
+[2023-02-03T23:54:37.527+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=me
+AIRFLOW_CTX_DAG_ID=real_estate_data_pipeline
+AIRFLOW_CTX_TASK_ID=read_csv
+AIRFLOW_CTX_EXECUTION_DATE=2023-02-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-02-02T00:00:00+00:00
+[2023-02-03T23:54:37.539+0000] {logging_mixin.py:117} INFO - File esxist ?
+[2023-02-03T23:54:37.552+0000] {logging_mixin.py:117} INFO - True
+[2023-02-03T23:54:37.774+0000] {python.py:177} INFO - Done. Returned value was: {"address":{"0":"1234 Elm St","1":"5678 Oak Ave","2":"1234 Birch Rd"},"city":{"0":"Anytown","1":"Othertown","2":"Sometown"},"zipcode":{"0":12345,"1":67890,"2":54321},"price":{"0":500000,"1":450000,"2":425000},"bedrooms":{"0":3,"1":4,"2":3},"bathrooms":{"0":2.0,"1":2.5,"2":2.0},"sqft":{"0":2000,"1":2500,"2":1500},"sale_date":{"0":"2022-01-01","1":"2022-01-02","2":"2022-01-03"}}
+[2023-02-03T23:54:38.341+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=real_estate_data_pipeline, task_id=read_csv, execution_date=20230202T000000, start_date=20230203T235428, end_date=20230203T235438
+[2023-02-03T23:54:39.562+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2023-02-03T23:54:40.028+0000] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

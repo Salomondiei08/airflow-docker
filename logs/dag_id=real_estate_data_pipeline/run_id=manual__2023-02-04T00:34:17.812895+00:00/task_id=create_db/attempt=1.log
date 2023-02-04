@@ -1,0 +1,43 @@
+[2023-02-04T00:34:20.939+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: real_estate_data_pipeline.create_db manual__2023-02-04T00:34:17.812895+00:00 [queued]>
+[2023-02-04T00:34:20.947+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: real_estate_data_pipeline.create_db manual__2023-02-04T00:34:17.812895+00:00 [queued]>
+[2023-02-04T00:34:20.948+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-04T00:34:20.948+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 2
+[2023-02-04T00:34:20.948+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-04T00:34:20.957+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): create_db> on 2023-02-04 00:34:17.812895+00:00
+[2023-02-04T00:34:20.964+0000] {standard_task_runner.py:54} INFO - Started process 2296 to run task
+[2023-02-04T00:34:20.969+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'real_estate_data_pipeline', 'create_db', 'manual__2023-02-04T00:34:17.812895+00:00', '--job-id', '1304', '--raw', '--subdir', 'DAGS_FOLDER/real_estate_dag.py', '--cfg-path', '/tmp/tmp1hxqvf0h']
+[2023-02-04T00:34:20.970+0000] {standard_task_runner.py:83} INFO - Job 1304: Subtask create_db
+[2023-02-04T00:34:20.972+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/***/dags/real_estate_dag.py
+[2023-02-04T00:34:21.359+0000] {task_command.py:384} INFO - Running <TaskInstance: real_estate_data_pipeline.create_db manual__2023-02-04T00:34:17.812895+00:00 [running]> on host 9667f615f42a
+[2023-02-04T00:34:21.406+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=me
+AIRFLOW_CTX_DAG_ID=real_estate_data_pipeline
+AIRFLOW_CTX_TASK_ID=create_db
+AIRFLOW_CTX_EXECUTION_DATE=2023-02-04T00:34:17.812895+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-02-04T00:34:17.812895+00:00
+[2023-02-04T00:34:21.410+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/real_estate_dag.py", line 71, in create_db
+    conn = psycopg2.connect(dbname="housing_market_db", user="postgres", password="postgres", host="localhost")
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Cannot assign requested address
+	Is the server running on that host and accepting TCP/IP connections?
+
+[2023-02-04T00:34:21.418+0000] {taskinstance.py:1406} INFO - Marking task as UP_FOR_RETRY. dag_id=real_estate_data_pipeline, task_id=create_db, execution_date=20230204T003417, start_date=20230204T003420, end_date=20230204T003421
+[2023-02-04T00:34:21.425+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 1304 for task create_db (connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Cannot assign requested address
+	Is the server running on that host and accepting TCP/IP connections?
+; 2296)
+[2023-02-04T00:34:21.469+0000] {local_task_job.py:164} INFO - Task exited with return code 1
+[2023-02-04T00:34:21.488+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
